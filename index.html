@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Основание мира | Вики кампании</title>
-    <link rel="stylesheet" href="styles.css?v=7" />
+    <link rel="stylesheet" href="styles.css?v=8" />
   </head>
   <body>
     <header class="map-hero" id="top">
@@ -14,10 +14,7 @@
           <span>Основание мира</span>
         </a>
         <div class="topbar-actions">
-          <a href="#powers">Державы</a>
-          <a href="#kharak">Кхарак</a>
-          <a href="#magic">Магия</a>
-          <a href="#timeline">История</a>
+          <a href="state-veltir.html">Державы</a><a href="kharak.html">Кхарак</a><a href="magic.html">Магия</a><a href="history.html">История</a>
         </div>
       </nav>
 
@@ -27,23 +24,45 @@
     </header>
 
     <main class="page-layout">
-      <aside class="sidebar" aria-label="Разделы вики">
-        <label class="search-label" for="wikiSearch">Поиск</label>
-        <input id="wikiSearch" class="search" type="search" placeholder="руда, Велтир, Кхарак..." />
-        <nav class="side-nav">
-          <a href="#atlas">Карта</a>
-          <a href="#world">Мир</a>
-          <a href="#powers">Державы</a>
-          <a href="#kharak">Кхарак</a>
-          <a href="#magic">Магия</a>
-          <a href="#timeline">История</a>
-          <a href="#geography">География</a>
-          <a href="#races">Расы</a>
-          <a href="#religion">Религия</a>
-          <a href="#tech">Технологии</a>
-          <a href="#rumors">Слухи</a>
-        </nav>
-      </aside>
+      <aside class="sidebar" aria-label="Дерево Codex">
+  <label class="search-label" for="wikiSearch">Поиск по текущей странице</label>
+  <input id="wikiSearch" class="search" type="search" placeholder="руда, Велтир, Картур..." />
+  <nav class="side-nav codex-tree">
+    <a class="codex-home" href="index.html#top">Главная</a>
+    <details open>
+      <summary>Мир</summary>
+      <a href="index.html#world">Картина мира</a>
+      <a href="history.html">История</a>
+      <a href="map.html">Карта мира</a>
+      <a href="index.html#geography">География</a>
+    </details>
+    <details open>
+      <summary>Государства</summary>
+      <a href="state-veltir.html">Велтир</a>
+      <a href="state-markor.html">Маркор</a>
+      <a href="state-elidor.html">Элидор</a>
+    </details>
+    <details open>
+      <summary>Расы</summary>
+      <a href="race-human.html">Люди</a>
+      <a href="race-elf.html">Эльфы</a>
+      <a href="race-dwarf.html">Дворфы</a>
+      <a href="race-orc.html">Орки</a>
+    </details>
+    <details>
+      <summary>Знания</summary>
+      <a href="magic.html">Магия</a>
+      <a href="kharak.html">Язык Кхарак</a>
+      <a href="kartur.html">Картур</a>
+    </details>
+    <details>
+      <summary>Архив</summary>
+      <a href="index.html#religion">Религия</a>
+      <a href="index.html#tech">Технологии</a>
+      <a href="index.html#rumors">Тайны мира</a>
+    </details>
+  </nav>
+</aside>
 
       <section class="content">
         <section class="section-block searchable" id="world" data-search="мир возраст философия добро зло государства мораль выбор Велтир Маркор Элидор">
@@ -205,6 +224,7 @@
     </main>
 
     <footer class="footer"><a href="#top">Наверх</a><span>Вики кампании для игроков</span></footer>
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=8"></script>
   </body>
 </html>
+

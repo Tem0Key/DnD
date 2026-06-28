@@ -1,4 +1,4 @@
-const searchInput = document.querySelector("#wikiSearch");
+﻿const searchInput = document.querySelector("#wikiSearch");
 const sections = [...document.querySelectorAll(".searchable")];
 const navLinks = [...document.querySelectorAll(".side-nav a")];
 
@@ -63,4 +63,25 @@ document.querySelectorAll("[data-drag-scroll]").forEach((strip) => {
   strip.addEventListener("pointerup", stopScrollDrag);
   strip.addEventListener("pointercancel", stopScrollDrag);
   strip.addEventListener("pointerleave", stopScrollDrag);
+});
+
+const backTop = document.querySelector(".back-top");
+const treeDetails = [...document.querySelectorAll(".codex-tree details")];
+
+treeDetails.forEach((details, index) => {
+  const key = `codex-tree-${index}`;
+  const saved = localStorage.getItem(key);
+  if (saved !== null) details.open = saved === "true";
+  details.addEventListener("toggle", () => localStorage.setItem(key, String(details.open)));
+});
+
+window.addEventListener("scroll", () => {
+  backTop?.classList.toggle("is-visible", window.scrollY > 520);
+}, { passive: true });
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "/" && document.activeElement?.tagName !== "INPUT") {
+    event.preventDefault();
+    searchInput?.focus();
+  }
 });
