@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Основание мира | Вики кампании</title>
+    <link rel="stylesheet" href="styles.css?v=7" />
+  </head>
+  <body>
+    <header class="map-hero" id="top">
+      <nav class="topbar" aria-label="Главная навигация">
+        <a class="brand" href="#top" aria-label="Основание мира">
+          <span class="brand-mark"></span>
+          <span>Основание мира</span>
+        </a>
+        <div class="topbar-actions">
+          <a href="#powers">Державы</a>
+          <a href="#kharak">Кхарак</a>
+          <a href="#magic">Магия</a>
+          <a href="#timeline">История</a>
+        </div>
+      </nav>
+
+      <section class="atlas-top searchable" id="atlas" data-search="карта атлас зум Велтир Маркор Элидор мертвое море мертвые земли">
+        <img class="plain-map" src="assets/world-map-clean.png" alt="Чистая политическая карта мира без подписей, с городскими точками, дорогами и границами" />
+      </section>
+    </header>
+
+    <main class="page-layout">
+      <aside class="sidebar" aria-label="Разделы вики">
+        <label class="search-label" for="wikiSearch">Поиск</label>
+        <input id="wikiSearch" class="search" type="search" placeholder="руда, Велтир, Кхарак..." />
+        <nav class="side-nav">
+          <a href="#atlas">Карта</a>
+          <a href="#world">Мир</a>
+          <a href="#powers">Державы</a>
+          <a href="#kharak">Кхарак</a>
+          <a href="#magic">Магия</a>
+          <a href="#timeline">История</a>
+          <a href="#geography">География</a>
+          <a href="#races">Расы</a>
+          <a href="#religion">Религия</a>
+          <a href="#tech">Технологии</a>
+          <a href="#rumors">Слухи</a>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <section class="section-block searchable" id="world" data-search="мир возраст философия добро зло государства мораль выбор Велтир Маркор Элидор">
+          <p class="kicker">01 / Картина мира</p>
+          <h2>Мир без простого добра и зла</h2>
+          <div class="lead-grid">
+            <article><h3>Возраст</h3><p>Миру больше 3000 лет. Последние две тысячи лет известны по хроникам, а более древняя история растворяется в легендах, руинах и спорных преданиях.</p></article>
+            <article><h3>Ресурс</h3><p>Магическая руда изменила экономику, войны, медицину и саму идею власти. У кого больше магов и запасов руды, тот диктует условия.</p></article>
+            <article><h3>Настроение</h3><p>Мир красивый, но тревожный. В нем есть свадьбы, ярмарки и песни в тавернах, но все понимают: новая война может начаться внезапно.</p></article>
+          </div>
+        </section>
+
+        <section class="section-block searchable" id="powers" data-search="державы Велтир Маркор Элидор картели дома армия флот эльфы дворфы люди столицы">
+          <p class="kicker">02 / Политика</p>
+          <h2>Великие державы</h2>
+          <div class="scroll-frame">
+            <button class="scroll-arrow scroll-arrow-left" type="button" data-scroll-target="faction-strip" data-scroll-dir="-1" aria-label="Назад"></button>
+            <button class="scroll-arrow scroll-arrow-right" type="button" data-scroll-target="faction-strip" data-scroll-dir="1" aria-label="Вперед"></button>
+          <div class="h-scroll faction-strip" data-drag-scroll aria-label="Горизонтальный список держав">
+            <article class="faction-slide faction-x">
+              <img src="assets/capital-veltir.png" alt="Столица Велтира среди рудных гор" />
+              <div class="slide-copy">
+                <p class="faction-name">Велтир</p>
+                <h3>Крепость руды</h3>
+                <p>Государство построило силу на контроле магии, дисциплине и защите границ. Здесь самый высокий уровень жизни, сильнейшая армия и жесткая вера в безопасность любой ценой.</p>
+                <dl><div><dt>Философия</dt><dd>государство важнее человека</dd></div><div><dt>Тень</dt><dd>пропаганда и секретные программы</dd></div></dl>
+              </div>
+            </article>
+
+            <article class="faction-slide faction-b">
+              <img src="assets/capital-markor.png" alt="Столица Маркора на торговых путях" />
+              <div class="slide-copy">
+                <p class="faction-name">Маркор</p>
+                <h3>Союз торговых путей</h3>
+                <p>Страной управляют пять Великих картелей через Совет Картелей. Договор Катур считается священным, но за пределами сделки действует простое правило: сильный свободнее слабого.</p>
+                <dl><div><dt>Философия</dt><dd>свобода важнее закона</dd></div><div><dt>Тень</dt><dd>картельные войны и власть выгоды</dd></div></dl>
+              </div>
+            </article>
+
+            <article class="faction-slide faction-v">
+              <img src="assets/capital-elidor.png" alt="Горная столица Элидора" />
+              <div class="slide-copy">
+                <p class="faction-name">Элидор</p>
+                <h3>Гора знаний</h3>
+                <p>Небольшая держава Совета Домов, защищенная горами. Эльфийские дома владеют секретами обработки руды, а лучшие ученые и инженеры работают именно здесь.</p>
+                <dl><div><dt>Философия</dt><dd>польза и знание выше эмоций</dd></div><div><dt>Тень</dt><dd>ценность личности меряют пользой</dd></div></dl>
+              </div>
+            </article>
+          </div>
+          </div>
+        </section>
+
+        <section class="section-block searchable" id="kharak" data-search="Кхарак язык орки древний язык вел тир дор мор кар ар ион сар нок хар эль рах">
+          <p class="kicker">03 / Древний язык</p>
+          <h2>Кхарак</h2>
+          <div class="split">
+            <div>
+              <p>Кхарак - древнейший известный язык мира. На нем говорила цивилизация орков до загадочного исчезновения более двух тысяч лет назад.</p>
+              <p>Сегодня язык считается мертвым: полностью им не владеет никто. Отдельные корни сохранились в названиях государств, городов, рек, хребтов и руин.</p>
+            </div>
+            <div class="roots-grid">
+  <span><b>вел</b> руда</span>
+  <span><b>тир</b> крепость</span>
+  <span><b>дор</b> гора</span>
+  <span><b>мор</b> море</span>
+
+  <span><b>кар</b> путь, торговля</span>
+  <span><b>ар</b> народ</span>
+  <span><b>нок</b> тьма</span>
+  <span><b>эль</b> знание</span>
+
+  <span><b>тур</b> клятва, нерушимость</span>
+  <span><b>нар</b> закон, порядок</span>
+  <span><b>ак</b> связь, соединение</span>
+  <span><b>хар</b> жизнь, жизненная сила</span>
+  <span><b>гар</b> город</span>
+  <span><b>сар</b> свет</span>
+  <span><b>рах</b> власть</span>
+  <span><b>эш</b> огонь</span>
+  <span><b>тал</b> лес</span>
+  <span><b>карн</b> кровь</span>
+</div>
+          </div>
+        </section>
+
+        <section class="section-block searchable" id="magic" data-search="магия руда мана маги низшие средние высшие эссенция регенерация школы некромантия эволюция">
+          <p class="kicker">04 / Магия</p>
+          <h2>Руда, мана и цена силы</h2>
+          <div class="split">
+            <div>
+              <p>Мана не восстанавливается сама. Каждое применение магии расходует запас, а вернуть его можно только очищенной рудой или ее производными.</p>
+              <div class="rules-list">
+                <article><h3>Низшие маги</h3><p>Слабые проявления после контакта с рудой.</p></article>
+                <article><h3>Средние маги</h3><p>Основа военной силы; около тысячи на крупную державу.</p></article>
+                <article><h3>Высшие маги</h3><p>Легендарные фигуры; обычно не больше десяти на державу.</p></article>
+              </div>
+            </div>
+            <aside class="note-panel"><h3>Известные проявления</h3><p>Контроль стихий, телекинез, невидимость, телепортация, усиление тела и поддерживающее исцеление.</p><p class="warning">Запрещенные школы: некромантия и искусственная эволюция.</p></aside>
+          </div>
+        </section>
+
+        <section class="section-block searchable" id="timeline" data-search="история орки эпидемия зараженные древность руины исчезновение руды Кхарак">
+          <p class="kicker">05 / История</p>
+          <h2>Короткая хронология</h2>
+          <div class="timeline">
+            <article><span>Древность</span><h3>Эпоха орков</h3><p>Исчезнувшая цивилизация первой открыла добычу и обработку магической руды. От нее остались технологии, строения, язык Кхарак и слишком много вопросов.</p></article>
+            <article><span>Около 2000 лет хроник</span><h3>Расцвет письменной истории</h3><p>Державы, дома, картели и малые страны начали фиксировать войны, торговлю, союзы и первые научные школы.</p></article>
+            <article><span>Около 100 лет назад</span><h3>Великая эпидемия</h3><p>Эксперименты с жизненной эссенцией исказили тела людей. Многие зараженные были изгнаны в Мертвые земли или сброшены в Великое море.</p></article>
+          </div>
+        </section>
+
+        <section class="section-block searchable" id="geography" data-search="география мертвое море горы пустыни малые государства шахты монстры границы">
+          <p class="kicker">06 / Земли</p>
+          <h2>География конфликтов</h2>
+          <div class="lead-grid">
+            <article><h3>Горы Элидора</h3><p>Сложный рельеф делает вторжение дорогим и опасным.</p></article>
+            <article><h3>Мертвое море</h3><p>Опасная граница между Велтиром и Маркором, полная морских чудовищ.</p></article>
+            <article><h3>Малые страны</h3><p>Часто владеют шахтами и становятся полем чужих войн.</p></article>
+          </div>
+        </section>
+
+        <section class="section-block searchable" id="races" data-search="расы люди эльфы дворфы орки возраст оружейники наука">
+          <p class="kicker">07 / Народы</p>
+          <h2>Расы мира</h2>
+          <div class="scroll-frame">
+            <button class="scroll-arrow scroll-arrow-left" type="button" data-scroll-target="race-strip" data-scroll-dir="-1" aria-label="Назад"></button>
+            <button class="scroll-arrow scroll-arrow-right" type="button" data-scroll-target="race-strip" data-scroll-dir="1" aria-label="Вперед"></button>
+          <div class="h-scroll race-strip" data-drag-scroll aria-label="Горизонтальный список рас">
+            <article style="--race-image: url('assets/race-human.png')"><div><h3>Люди</h3><p>Самая многочисленная раса. Живут около 70-90 лет и правят Велтиром.</p></div></article>
+            <article style="--race-image: url('assets/race-elf.png')"><div><h3>Эльфы</h3><p>Редки, живут около 200 лет, особенно сильны в науке и обработке руды.</p></div></article>
+            <article style="--race-image: url('assets/race-dwarf.png')"><div><h3>Дворфы</h3><p>Живут около 120 лет, славятся оружейным делом и любовью к огнестрельному оружию.</p></div></article>
+            <article style="--race-image: url('assets/race-orc.png')"><div><h3>Орки</h3><p>Исчезнувшая цивилизация, оставившая руины, Кхарак и технологии добычи руды.</p></div></article>
+          </div>
+          </div>
+        </section>
+
+        <section class="section-block searchable" id="religion" data-search="религия магия культ атеизм боги пропаганда Велтир Маркор Элидор">
+          <p class="kicker">08 / Вера</p>
+          <h2>Религия и сомнение</h2>
+          <p>Религия в мире слаба, кроме Велтира, где культ магии используется как идеологический инструмент. В Маркоре верят во что угодно, пока это не мешает сделке. В Элидоре религию вытесняет наука.</p>
+        </section>
+
+        <section class="section-block searchable" id="tech" data-search="технологии средневековье порох ружья компасы книги корабли флот">
+          <p class="kicker">09 / Быт</p>
+          <h2>Технологии</h2>
+          <p>Основа быта напоминает средневековье: книги пишут вручную, дороги опасны, власть часто держится на земле и людях. При этом уже известны порох, компасы, развитое кораблестроение и рудные технологии, унаследованные от орков.</p>
+        </section>
+
+        <section class="section-block searchable" id="rumors" data-search="слухи тайны зараженные искусственная руда эссенция мертвые земли орки Кхарак">
+          <p class="kicker">10 / Слухи</p>
+          <h2>То, о чем говорят шепотом</h2>
+          <div class="lead-grid">
+            <article><h3>Искусственная руда</h3><p>Ходят слухи, что одну из держав интересует не только добыча, но и производство руды. Официально это невозможно.</p></article>
+            <article><h3>Зараженные</h3><p>Многие зараженные сохранили разум. Они были изгнаны, потеряли семьи и теперь мечтают вернуться в мир живых.</p></article>
+            <article><h3>Кхарак</h3><p>Современные ученые восстановили лишь часть языка. Остальные слова могут скрывать историю орков и происхождение магической руды.</p></article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer"><a href="#top">Наверх</a><span>Вики кампании для игроков</span></footer>
+    <script src="script.js?v=5"></script>
+  </body>
+</html>
