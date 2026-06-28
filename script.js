@@ -85,3 +85,60 @@ document.addEventListener("keydown", (event) => {
     searchInput?.focus();
   }
 });
+
+const eraButtons = [...document.querySelectorAll(".era-step")];
+const eraPanels = [...document.querySelectorAll(".era-panel")];
+
+eraButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    eraButtons.forEach((item) => item.classList.toggle("is-active", item === button));
+    eraPanels.forEach((panel) => panel.classList.toggle("is-active", panel.id === button.dataset.era));
+  });
+});
+
+const autoLinkTerms = [
+  { text: "Мёртвые земли", href: "map.html" },
+  { text: "Мертвые земли", href: "map.html" },
+  { text: "Велтир", href: "state-veltir.html" },
+  { text: "Маркор", href: "state-markor.html" },
+  { text: "Элидор", href: "state-elidor.html" },
+  { text: "Картур", href: "kartur.html" },
+  { text: "Кхарак", href: "kharak.html" },
+  { text: "Руда", href: "magic.html#ore" },
+  { text: "руда", href: "magic.html#ore" },
+  { text: "Эссенция", href: "magic.html#forbidden" },
+  { text: "эссенция", href: "magic.html#forbidden" }
+];
+
+function shouldSkipAutoLink(node) {
+  const parent = node.parentElement;
+  return !parent || parent.closest("a, h1, h2, h3, dt, .article-toc, .breadcrumbs, .codex-tree, .topbar");
+}
+
+function linkFirstTerm(root, term) {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if (shouldSkipAutoLink(node) || !node.nodeValue.includes(term.text)) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  const node = walker.nextNode();
+  if (!node) return;
+  const index = node.nodeValue.indexOf(term.text);
+  const fragment = document.createDocumentFragment();
+  const before = node.nodeValue.slice(0, index);
+  const match = node.nodeValue.slice(index, index + term.text.length);
+  const after = node.nodeValue.slice(index + term.text.length);
+  if (before) fragment.append(document.createTextNode(before));
+  const link = document.createElement("a");
+  link.href = term.href;
+  link.className = "auto-linked";
+  link.textContent = match;
+  fragment.append(link);
+  if (after) fragment.append(document.createTextNode(after));
+  node.parentNode.replaceChild(fragment, node);
+}
+
+document.querySelectorAll(".codex-article, .content").forEach((root) => {
+  autoLinkTerms.forEach((term) => linkFirstTerm(root, term));
+});
