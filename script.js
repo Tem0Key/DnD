@@ -97,6 +97,8 @@ eraButtons.forEach((button) => {
 });
 
 const autoLinkTerms = [
+  { text: "Заражённые", href: "race-infected.html" },
+  { text: "заражённые", href: "race-infected.html" },
   { text: "Мёртвые земли", href: "map.html" },
   { text: "Мертвые земли", href: "map.html" },
   { text: "Велтир", href: "state-veltir.html" },
@@ -142,3 +144,5 @@ function linkFirstTerm(root, term) {
 document.querySelectorAll(".codex-article, .content").forEach((root) => {
   autoLinkTerms.forEach((term) => linkFirstTerm(root, term));
 });
+
+

@@ -803,3 +803,44 @@ dd { margin: 4px 0 0; }
     display: none;
   }
 }
+
+.codex-figure {
+  margin: 18px 0 0;
+  border: 1px solid rgba(226, 196, 139, 0.16);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(12, 20, 21, 0.58);
+}
+
+.codex-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.codex-figure figcaption {
+  padding: 14px 16px;
+  color: rgba(243, 234, 216, 0.68);
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  border-top: 1px solid rgba(226, 196, 139, 0.12);
+}
+
+.relations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.relations-grid article {
+  padding-top: 16px;
+  border-top: 1px solid rgba(226, 196, 139, 0.16);
+}
+
+@media (max-width: 760px) {
+  .relations-grid {
+    grid-template-columns: 1fr;
+  }
+}
